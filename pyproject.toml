@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "djbench"
+version = "0.1.0"
+description = "Score DJ software's beat grids, tempo and key against independent human-labelled truth, with bootstrap confidence intervals."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy", "mir_eval"]
+
+[project.optional-dependencies]
+serato = ["serato-reader"]
+
+[project.scripts]
+djbench = "djbench.cli:main"
+
+[tool.setuptools]
+packages = ["djbench", "djbench.adapters"]

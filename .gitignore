@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.DS_Store
+# downloaded datasets and your own results never go into git
+data/
+beats/
+scores/
